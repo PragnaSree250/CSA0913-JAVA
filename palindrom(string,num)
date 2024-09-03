@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class sampe2 {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.err.println("enter the choice:");
+        int value=sc.nextInt();
+        switch (value) {
+            case 1:
+            System.err.println("enter the string");
+                String s1=sc.next();
+                String s2="";
+                int len=s1.length();
+                for (int i = len-1; i>=0; i--) {
+                    s2+=s1.charAt(i);
+                }
+                System.err.print("palindrom :");
+                System.out.println(" "+s1.equals(s2));
+                break;
+            case 2:
+            System.err.println("enter the num: ");
+            int a=sc.nextInt();
+            int num=a;
+            int sum=0;
+            int rem;
+            while(a!=0)
+            {
+                rem=a%10;
+                sum=(sum*10)+rem;
+                a=a/10;
+            }
+            if(sum==num)
+            {
+                System.err.println("palindrom");
+            }
+            else{
+                System.err.println("not a palindrom");
+            }
+                break;
+            default:
+               System.err.println("enter valid choice:");
+                break;
+        }
+    }
+}
